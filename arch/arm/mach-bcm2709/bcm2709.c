@@ -159,6 +159,11 @@ static struct map_desc bcm2709_io_desc[] __initdata = {
 	 .pfn = __phys_to_pfn(ARM_LOCAL_BASE),
 	 .length = SZ_4K,
 	 .type = MT_DEVICE},
+	 {
+	 .virtual = IO_ADDRESS(V3D_BASE),
+	 .pfn = __phys_to_pfn(V3D_BASE),
+	 .length = SZ_4K,
+	 .type = MT_DEVICE}
 };
 
 void __init bcm2709_map_io(void)

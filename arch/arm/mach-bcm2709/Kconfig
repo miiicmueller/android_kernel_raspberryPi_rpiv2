@@ -32,6 +32,14 @@ config BCM2708_VCMEM
         help
           Helper for videocore memory access and total size allocation.
 
+config BCM2708_DMAER
+	bool "DMA VC module (Simon Hall)"
+	depends on MACH_BCM2709
+        default n
+        help
+          DMA for copying buffer to VC memory
+
+
 config BCM2708_NOL2CACHE
 	bool "Videocore L2 cache disable"
 	depends on MACH_BCM2709
